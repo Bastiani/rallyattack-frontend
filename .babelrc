@@ -1,0 +1,4 @@
+{
+  presets: ['flow'],
+  plugins: ['@babel/plugin-syntax-optional-chaining'],
+}
