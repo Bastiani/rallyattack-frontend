@@ -91,30 +91,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// const httpLink = createHttpLink({
-//   uri: 'http://localhost:5000/graphql',
-// });
-
-// const authLink = setContext((_, { headers }) => {
-//   // get the authentication token from local storage if it exists
-//   const token = localStorage.getItem('accessToken');
-//   console.log('=app', token);
-
-//   // return the headers to the context so httpLink can read them
-//   return {
-//     headers: {
-//       ...headers,
-//       authorization: token ? token : '',
-//     },
-//   };
-// });
-
-// const client = new ApolloClient({
-//   uri: 'http://localhost:5000/graphql',
-//   link: concat(authLink, httpLink),
-//   cache: new InMemoryCache(),
-// });
-
 const Public = () => <h3>Public</h3>;
 const Protected = props => <h3>Protected {props.data.me.name}</h3>;
 
